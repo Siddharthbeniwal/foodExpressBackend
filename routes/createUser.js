@@ -28,7 +28,7 @@ router.post('/createUser',
         const isEmailExist = await User.findOne({email: reqEmail})
         if(isEmailExist) {
             return res.json({
-                error: 'Email already exists.'
+                error: 'Email already exists. Please Login directly or sign up with a different email.'
             })
         }
 
